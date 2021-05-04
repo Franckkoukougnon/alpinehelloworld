@@ -4,7 +4,7 @@ pipeline {
        IMAGE_TAG = "latest"
        STAGING = "franck-staging"
        PRODUCTION = "franck-production"
-       IMAGE_REPO = "franckkoukougnon"
+       IMAGE_REPO = "franck"
      }
      agent none
      stages {
@@ -50,7 +50,7 @@ pipeline {
     stage('Push image on dockerhub') {
            agent any 
            environment {
-                DOCKERHUB_LOGIN = credentials('franckkoukougnon')
+                DOCKERHUB_LOGIN = credentials('dockerhub-franck')
                 
             }
 
